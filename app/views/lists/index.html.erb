@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1" href= "#"> <i class="fas fa-popcorn"></i>
+    Navbar</span>
+  </div>
+</nav>
+
+<div class="container">
+<h1>All your lists</h1>
+<ul>
+  <% @lists.each do |list| %>
+        <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<p></p><%= link_to "Create a new list", new_list_path %>
+</div>
