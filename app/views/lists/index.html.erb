@@ -1,17 +1,18 @@
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1" href= "#"> <i class="fas fa-popcorn"></i>
-    Navbar</span>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+  <div class="container">
+    <h1 class="text-center"> <strong>Save any lists or movies</strong></h1>
   </div>
-</nav>
+</div>
 
-<div class="container">
-<h1>All your lists</h1>
-<ul>
-  <% @lists.each do |list| %>
-        <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="container my-3 col-3">
+  <div class="cards">
+    <div class="list-container d-flex justify-content-between">
+      <% @lists.each do |list| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2912&q=80)">
+          <%= link_to list.name, list_path(list) %>
+        </div>
+      <% end %>
+  </div>
+</div>
 
-<p></p><%= link_to "Create a new list", new_list_path %>
 </div>

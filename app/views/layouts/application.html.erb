@@ -7,10 +7,20 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <i class="fas fa-couch"></i>
+      <div>
+        <button class="btn btn-outline-success me-2" type="button">My List</button>
+        <%= link_to "New List", new_list_path, class: "btn btn-sm btn-outline-secondary" %>
+      </div>
+    </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

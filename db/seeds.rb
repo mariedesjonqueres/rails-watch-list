@@ -13,3 +13,5 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 List.create(name: "comedy")
 List.create(name: "horror")
+List.create(name: "romantic")
+List.create(name: "drama")
